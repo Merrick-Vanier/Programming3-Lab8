@@ -89,9 +89,12 @@ public class Lab08FXMLController implements Initializable {
 
     @FXML
     private void drawingAreaMouseDragged(MouseEvent event) {
-        Circle circle = new Circle(event.getX(), event.getY(), radius.getRadius());
-        circle.setFill(brushColor);
-        drawingAreaPane.getChildren().add(circle);
+        if (event.getX() > drawingAreaPane.getMaxWidth()) {
+            Circle circle = new Circle(event.getX(), event.getY(), radius.getRadius());
+            circle.setFill(brushColor);
+            drawingAreaPane.getChildren().add(circle);
+            
+        }
     }
     
     private enum PenSize {
