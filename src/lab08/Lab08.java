@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 /**
  *
  * @author 6237800
+ * Github link: https://github.com/Merrick-Vanier/Programming3-Lab8
  */
 public class Lab08 extends Application {
 
@@ -30,8 +31,9 @@ public class Lab08 extends Application {
     public void start(Stage stage) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("Lab08FXML.fxml"));
-            Scene s = new Scene(root, 300, 300);
+            Scene s = new Scene(root);
             stage.setScene(s);
+            stage.show();
         } catch (IOException ex) {
             Logger.getLogger(Lab08.class.getName()).log(Level.SEVERE, null, ex);
         }
